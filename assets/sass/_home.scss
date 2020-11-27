@@ -219,17 +219,36 @@
     border-radius: 30px;
     // width: 100px;
     cursor: pointer;
+    margin-bottom: 130px;
   }
 
   .food-slider {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
+    display: flex;
+    margin-bottom: 2rem;
 
     .slide {
       width: 20%;
       position: relative;
       height: 500px;
       // padding: 20px;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      &:hover {
+        .background {
+          background: rgb(245, 156, 46);
+          transform: translate3d(0, -100px, 0);
+        }
+        .content {
+          .food-title {
+            color: #fff;
+          }
+          .food-description {
+            color: #fff;
+          }
+        }
+      }
       
       .background {
         background: #fff;
@@ -240,6 +259,7 @@
         top: 0;
         bottom: 0;
         padding: 20px;
+        transition: transform .3s ease-in-out;
       }
 
       .content {
@@ -280,5 +300,5 @@ h2 {
   font-size: 2rem;
   text-transform: capitalize;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 }
